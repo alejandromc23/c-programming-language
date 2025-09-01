@@ -1,5 +1,5 @@
 #include <stdio.h>
-#define MAX_LINE 1000
+#define MAXLINE 1000
 
 int getLine(char s[], int limit);
 int cleanComments(char s[], int imc);
@@ -9,11 +9,11 @@ int cleanComments(char s[], int imc);
 
 int main()
 {
-    char line[MAX_LINE];
+    char line[MAXLINE];
     int len;
     int isMultilineComment = 0;
 
-    while((len = getLine(line, MAX_LINE)) > 0) {
+    while((len = getLine(line, MAXLINE)) > 0) {
         isMultilineComment = cleanComments(line, isMultilineComment);    
     }
 }
